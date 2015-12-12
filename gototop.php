@@ -16,7 +16,7 @@
 function hook_gototop_render_footer($data)
 {
     // footer text
-    $data['text'][] = file_get_contents(PluginManager::$PLUGINS_PATH . '/gototop/gototop.html');
+    $data['endofpage'][] = file_get_contents(PluginManager::$PLUGINS_PATH . '/gototop/gototop.html');
     $data['js_files'][] = PluginManager::$PLUGINS_PATH . '/gototop/scroll2Top.js';
     return $data;
 }
