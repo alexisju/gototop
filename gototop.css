@@ -1,10 +1,12 @@
+.goto .glyphicon {
+    color:white !important;
+}
+.goto {
+    margin-top:10px;
+    z-index: 100;
+}
 .totop {
-float: right;
-right: 20px;
-bottom: 80px;
-opacity: 0.5;
-z-index: 100;
-position: relative;
+opacity: 1;
 }
 .totop:hover {
 opacity: 0.7;
