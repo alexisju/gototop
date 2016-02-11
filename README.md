@@ -22,5 +22,5 @@ To enable the plugin, add `'gototop'` to your list of enabled plugins in `data/o
 . This should look like:
 
 ```
-$GLOBALS['config']['PLUGINS'] = array('qrcode', 'any_other_plugin', 'gototop')
+$GLOBALS['config']['PLUGINS'] = array('qrcode', 'any_other_plugin', 'gototop');
 ```
