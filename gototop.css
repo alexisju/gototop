@@ -2,14 +2,15 @@
     color:white !important;
 }
 .goto {
-    margin-top:10px;
+    margin: 10px 30px;
+    float:right;
     z-index: 100;
 }
 .totop {
-opacity: 1;
+    opacity: 1;
 }
 .totop:hover {
-opacity: 0.7;
-transition:400ms;
-cursor:pointer;
+    opacity: 0.7;
+    transition:400ms;
+    cursor:pointer;
 }
