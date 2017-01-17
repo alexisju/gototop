@@ -3,19 +3,18 @@
 A plugin for Shaarli which add a "Go to top" button on the footer.
 
 ### Installation/configuration
-Clone this repository inside your `tpl/plugins/` directory, or download the archive and unpack it there.  
+Clone this repository inside your `/plugins/` directory, or download the archive and unpack it there.  
 The directory structure should look like:
 
 ```
-└── tpl
-    └── plugins
-        └── gototop
-            ├── README.md
-            ├── gototop.php
-            ├── gototop.html
-            ├── gototop.css
-            ├── scroll2Top.js
-            └── top.php
+└── plugins
+    └── gototop
+        ├── README.md
+        ├── gototop.php
+        ├── gototop.html
+        ├── gototop.css
+        ├── scroll2Top.js
+        └── top.php
 ```
 
 To enable the plugin, just check it in the plugin administration page.
