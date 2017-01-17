@@ -1,6 +1,6 @@
 ## Go to Top plugin for Shaarli
 
-A plugin for Shaarli (community fork) who add a "Go to top" button
+A plugin for Shaarli which add a "Go to top" button on the footer.
 
 ### Installation/configuration
 Clone this repository inside your `tpl/plugins/` directory, or download the archive and unpack it there.  
@@ -18,9 +18,18 @@ The directory structure should look like:
             └── top.php
 ```
 
-To enable the plugin, add `'gototop'` to your list of enabled plugins in `data/options.php` (`PLUGINS` array)
-. This should look like:
+To enable the plugin, just check it in the plugin administration page.
+
+You can also add `gototop` to your list of enabled plugins in `data/config.json.php`
+(`general.enabled_plugins` list).
+
+This should look like:
 
 ```
-$GLOBALS['config']['PLUGINS'] = array('qrcode', 'any_other_plugin', 'gototop');
+"general": {
+  "enabled_plugins": [
+    "gototop",
+    [...]
+  ],
+}
 ```
