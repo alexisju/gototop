@@ -9,12 +9,14 @@
  * Optional : Glyphicon (included into Albinomouse-template for Shaarli)
  */
 
- function hook_gototop_render_includes($data)
+use Shaarli\Plugin\PluginManager;
+
+function hook_gototop_render_includes($data)
 {
     $data['css_files'][] = PluginManager::$PLUGINS_PATH . '/gototop/gototop.css';
     return $data;
 }
- 
+
 function hook_gototop_render_footer($data)
 {
     // footer text
