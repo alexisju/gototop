@@ -1,2 +1,4 @@
-description="Add a "Go to top" link on the footer"
-parameters=
+description='Add a "Go to top" link on the footer'
+parameters="GOTOTOP_CLASS;GOTOTOP_TITLE"
+parameter.GOTOTOP_CLASS="Icon class. Default: fa fa-chevron-up fa-2x"
+parameter.GOTOTOP_TITLE="Tooltip text. Default: Go to top"

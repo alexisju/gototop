@@ -9,16 +9,26 @@
  * Optional : Glyphicon (included into Albinomouse-template for Shaarli)
  */
 
- function hook_gototop_render_includes($data)
+use Shaarli\Plugin\PluginManager;
+
+//define("GOTOTOP_DEFAULT_CLASS", "glyphicon glyphicon-chevron-up");
+define("GOTOTOP_DEFAULT_CLASS", "fa fa-chevron-up fa-2x");
+define("GOTOTOP_DEFAULT_TITLE", "Go to top");
+
+function hook_gototop_render_includes($data)
 {
     $data['css_files'][] = PluginManager::$PLUGINS_PATH . '/gototop/gototop.css';
     return $data;
 }
- 
-function hook_gototop_render_footer($data)
+
+function hook_gototop_render_footer($data, $conf)
 {
     // footer text
-    $data['text'][] = '<div class="goto"><a href="#" class="totop"> haut <i class="glyphicon glyphicon-chevron-up"></i></a></div>';
+    $confval = $conf->get('plugins.GOTOTOP_CLASS');
+    $class = !empty($confval) ? $confval : GOTOTOP_DEFAULT_CLASS;
+    $confval = $conf->get('plugins.GOTOTOP_TITLE');
+    $title = !empty($confval) ? $confval : GOTOTOP_DEFAULT_TITLE;
+    $data['text'][] = '<div class="goto"><a href="#" class="totop" title="' . $title . '" aria-label="' . $title . '"><i class="' . $class. '"></i></a></div>';
     $data['endofpage'][] = file_get_contents(PluginManager::$PLUGINS_PATH . '/gototop/gototop.html');
     $data['js_files'][] = PluginManager::$PLUGINS_PATH . '/gototop/scroll2Top.js';
     return $data;
